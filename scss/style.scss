@@ -1,0 +1,128 @@
+@import url(https://fonts.googleapis.com/css?family=Audiowide);
+@import url(https://fonts.googleapis.com/css?family=Aldrich);
+$hd:teal;
+$gen:teal;
+$work:#00cc44;
+$work-dk:#006622;
+$font-hd:'Audiowide',helvetica;
+$font-gen:'Audiowide',helvetica;
+$font-foo:'Aldrich',helvetica;
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+html,body{height:100%;}
+body{
+  background-color:black;
+  color:$gen;
+  font-size:1.7rem;
+  font-family:$font-hd;
+}
+.center{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+#wrapper{
+ display:flex;
+ flex-direction:column;
+ align-items:space-between;
+}
+#tom{
+  border-radius:50%;
+  //border:2px solid #0d0d0d;
+  width:20rem;
+  height:20rem;
+  @include box-shadow(0 0 3rem cyan inset );
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-around;
+  #work{
+     cursor:pointer;
+     color:#00e64d;
+    &:hover{
+      color:$work;
+    }
+  }
+   #val{
+    font-size:2rem;
+    cursor:pointer;
+     &:hover{
+       color:cyan;
+     }
+    // font-family:$font-foo;
+  }
+  #val>div{
+    text-align:center;
+  }
+   #break{
+      cursor:pointer;
+      color:#5d091a;
+     &:hover{
+      color:crimson;
+    }
+  }
+}
+#slider{
+  margin-bottom:2rem;
+  display:none;
+  #s1{
+    position:relative;
+    border-radius:1rem;
+    background-color:$work;
+    width:20rem;
+    height:.2rem;
+    @include box-shadow(0 0 1rem $work-dk);
+    #s11{
+     position:absolute;
+     width:1.2rem;
+     height:1.2rem;     
+     top:-.5rem;
+     left:120px; 
+     border:2px solid #00b359;
+     @include box-shadow(0 0 1rem black inset);
+     border-radius:10%;
+     transform:rotate(45deg);
+     background-color:$work;
+     cursor:pointer;
+      //content:'\2620' 2655;
+    }
+  } 
+}
+#slider2{
+  margin-top:2rem;
+  display:none;
+  #s2{
+    position:relative;
+    border-radius:1rem;
+    background-color:crimson;
+    width:20rem;
+    height:.2rem;
+    opacity:1;
+    @include box-shadow(0 0 1rem crimson);
+     #s22{
+     position:absolute;
+     width:1.2rem;
+     height:1.2rem;     
+     top:-.5rem;
+     left:21px; 
+     border:2px solid salmon;
+     border-radius:10%;
+     @include box-shadow(0 0 1rem black inset);
+     transform:rotate(45deg);
+     background-color:crimson;
+     cursor:pointer;
+      //content:'\2620' 2655;
+    }
+  } 
+}
+.cross{
+  text-decoration:line-through;
+}

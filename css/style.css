@@ -1,0 +1,132 @@
+@import url(https://fonts.googleapis.com/css?family=Audiowide);
+@import url(https://fonts.googleapis.com/css?family=Aldrich);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: black;
+  color: teal;
+  font-size: 1.7rem;
+  font-family: "Audiowide", helvetica;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+}
+
+#tom {
+  border-radius: 50%;
+  width: 20rem;
+  height: 20rem;
+  -webkit-box-shadow: 0 0 3rem cyan inset;
+  -moz-box-shadow: 0 0 3rem cyan inset;
+  box-shadow: 0 0 3rem cyan inset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+#tom #work {
+  cursor: pointer;
+  color: #00e64d;
+}
+#tom #work:hover {
+  color: #00cc44;
+}
+#tom #val {
+  font-size: 2rem;
+  cursor: pointer;
+}
+#tom #val:hover {
+  color: cyan;
+}
+#tom #val > div {
+  text-align: center;
+}
+#tom #break {
+  cursor: pointer;
+  color: #5d091a;
+}
+#tom #break:hover {
+  color: crimson;
+}
+
+#slider {
+  margin-bottom: 2rem;
+  display: none;
+}
+#slider #s1 {
+  position: relative;
+  border-radius: 1rem;
+  background-color: #00cc44;
+  width: 20rem;
+  height: .2rem;
+  -webkit-box-shadow: 0 0 1rem #006622;
+  -moz-box-shadow: 0 0 1rem #006622;
+  box-shadow: 0 0 1rem #006622;
+}
+#slider #s1 #s11 {
+  position: absolute;
+  width: 1.2rem;
+  height: 1.2rem;
+  top: -.5rem;
+  left: 120px;
+  border: 2px solid #00b359;
+  -webkit-box-shadow: 0 0 1rem black inset;
+  -moz-box-shadow: 0 0 1rem black inset;
+  box-shadow: 0 0 1rem black inset;
+  border-radius: 10%;
+  transform: rotate(45deg);
+  background-color: #00cc44;
+  cursor: pointer;
+}
+
+#slider2 {
+  margin-top: 2rem;
+  display: none;
+}
+#slider2 #s2 {
+  position: relative;
+  border-radius: 1rem;
+  background-color: crimson;
+  width: 20rem;
+  height: .2rem;
+  opacity: 1;
+  -webkit-box-shadow: 0 0 1rem crimson;
+  -moz-box-shadow: 0 0 1rem crimson;
+  box-shadow: 0 0 1rem crimson;
+}
+#slider2 #s2 #s22 {
+  position: absolute;
+  width: 1.2rem;
+  height: 1.2rem;
+  top: -.5rem;
+  left: 21px;
+  border: 2px solid salmon;
+  border-radius: 10%;
+  -webkit-box-shadow: 0 0 1rem black inset;
+  -moz-box-shadow: 0 0 1rem black inset;
+  box-shadow: 0 0 1rem black inset;
+  transform: rotate(45deg);
+  background-color: crimson;
+  cursor: pointer;
+}
+
+.cross {
+  text-decoration: line-through;
+}
